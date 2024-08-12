@@ -1,0 +1,42 @@
+package estado.civil;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author MALLI
+ */
+public class EstadoCivil {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int añoActual = 2024; 
+        int añoNacimiento;
+        
+        while (true) {
+            System.out.print("Ingrese el año de nacimiento, y si desea terminar digite -1 ): ");
+            añoNacimiento = scanner.nextInt();
+            
+          
+            if (añoNacimiento == -1) {
+                break;
+            }
+            
+           
+            int edad = añoActual - añoNacimiento;
+            
+            
+            if (edad >= 18) {
+                System.out.println("Esta persona es apta para votar.");
+            } else {
+                System.out.println("Esta persona NO es apta para votar.");
+            }
+        }
+        
+        scanner.close();
+        System.out.println("Programa finalizado.");
+    }
+}
